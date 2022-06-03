@@ -1,0 +1,131 @@
+<html lang="en"><!--RAIZ DE LA PAGINA-->
+<head> <!-- CABECERA-->
+<head>
+    <meta charset="UTF-8">    <!--FORMATO CODIFICACIÓN DE CARACTERES-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--RESPONSIVE-->
+    <title>Consultas SQL</title>  <!--TITULO DE CABECERA-->
+    <link rel="stylesheet" href="../css/bootstrap.css"> <!--IMPORTACIÓN DE LA BIBLIOTECA BOOTSTRAP5-->
+</head>
+                                  <!--CUERPO DE LA PAGINA -->
+<body>
+  <div class="text-center bg-success text-white">   
+    <h1> CONSULTAS SQL METODO GET </h1>        <!--TITULO ENCABEZADO-->
+  </div>
+                                <!--MENU--> 
+  <div class="contaier" style="margin-left: 15px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Menú</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">           <!--ITEMS DEL MENU-->
+          <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Login <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Usuarios.html">Crear Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SQL.html"> SQL</a>
+          </li>
+          
+        </ul>  
+      </div>
+    </nav>      <!--CIERRE O FIN DEL MENU -->
+  </div>
+                              <!--INICIO DE UNA NUEVA SECCIÓN -->
+  <div class="container">
+    <div class="abs-center">
+
+        <br> <br> <br>
+
+        <!--GRILLA 1-->
+<div class="row">
+    <div class="col-lg-6 col-sm-6  ">  <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+      <br>
+       <h5> Consultas SQL </h5>
+        <br>
+        <button type="button" class="btn btn-success" onclick="getSql1()">Listado de Usuarios</button>
+        <div id="buscar">
+        </div>
+        <br>           
+        <button type="button" class="btn btn-success" onclick="getSql2()">Listado de Perfiles</button>
+        <div id="buscar">
+        </div>
+        <br>
+       
+
+<div class="row">
+  <!--INICIO DE UNA NUEVA SECCIÓN -->
+<div class="text-center bg-success text-white">
+<h5> Listado de Usuarios </h5>
+<!--TITULO ENCABEZADO #3-->
+</div>
+<!-- TABLA 1 -->
+<table id="tableUsuario" class="table table-success table-striped">
+<thead>
+  <tr>
+    <th>ID </th>
+    <th>Nombres </th>
+    <th>Apellidos </th>
+    <th>Usuario</th>
+    <th>Contraseña</th>
+    <th>Tipo de Perfil</th> 
+        
+  </tr>
+</thead>
+<tbody id="tableUsuarioBody"></tbody>
+
+</table>
+</div>
+<br>
+<div class="row">
+  <!--INICIO DE UNA NUEVA SECCIÓN -->
+<div class="text-center bg-success text-white">
+<h5> Perfiles </h5>
+<!--TITULO ENCABEZADO #3-->
+</div>
+<!-- TABLA 1 -->
+<table id="tablePerf" class="table table-success table-striped">
+<thead>
+  <tr>
+    <th>ID </th>
+    <th>Tipo de Perfiles </th>
+    <th>Estado</th>          
+    
+  </tr>
+</thead>
+<tbody id="tablePerfBody"></tbody>
+
+</table>
+</div>
+        
+</div>
+<div class="col-lg-6 col-sm-6 ">  <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+    <img src="../img/img22.png" class="img-fluid">   <!--IMPORTACIÓN DE IMAGEN --> 
+    <div class="col-lg-6 col-sm-6 "> <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->  </div>
+</div>
+<div class="ratio ratio-16x9"> <!--ETIQUETA DE INSERSIÓN -->  
+  <!--MAPA DE GOOGLE - ETIQUETA INFRAME -->  
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15666.301449301265!2d-74.7909976!3d10.9953899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b195f6bb10f7ede!2sCUL%20CORPORACION%20UNIVERSITARIA%20LATINOAMERICANA!5e0!3m2!1ses!2sco!4v1631663758000!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+<br><br>
+</div>
+
+<hr>
+<div class="text-center bg-success text-white">
+  citas@gmail.com <br />
+  Calle 52 #38 – 25 Barranquilla – Atlantico, Colombia <br />
+  (57) (5) 12345678 <br />
+  Copyright © 2019
+  Desarrollado por Jeiner Rodelo Barrios
+ </div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/procesos.js"></script>
+ <!--FIN DE PIE DE PAGINA -->  
+</body> <!--FIN O CIERRE DEL CUERPO DE PAGINA -->
+</html> <!--FIN DE HTML -->

@@ -1,0 +1,168 @@
+<html lang="en">
+<!--RAIZ DE LA PAGINA-->
+
+<head>
+  <!-- CABECERA-->
+
+  <head>
+    <meta charset="UTF-8">
+    <!--FORMATO CODIFICACIÓN DE CARACTERES-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--RESPONSIVE-->
+    <title>Registro de Usuarios</title>
+    <!--TITULO DE CABECERA-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!--IMPORTACIÓN DE LA BIBLIOTECA BOOTSTRAP5-->
+  </head>
+  <!--CUERPO DE LA PAGINA -->
+
+<body>
+  <div class="text-center bg-success text-white">
+    <h1> REGISTRAR NUEVO USUARIO </h1>
+    <!--TITULO ENCABEZADO-->
+  </div>
+  <!--MENU-->
+  <div class="contaier" style="margin-left: 15px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Menú</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <!--ITEMS DEL MENU-->
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Login <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Usuarios.html">Crear Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SQL.html"> SQL</a>
+          </li>
+          </ul>
+      </div>
+    </nav>
+    <!--CIERRE O FIN DEL MENU -->
+  </div>
+  <!--INICIO DE UNA NUEVA SECCIÓN -->
+  <div class="container">
+    <div class="abs-center">
+
+      <br> <br> <br>     
+
+      <!--GRILLA 1-->
+      <div class="row">
+        <div class="col-lg-6 col-sm-6  ">
+          <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+          <br>
+
+          <!--FORMULARIO DE BOOTSTRAP 5 -->
+          <form id="formu">
+            <h5> Nuevo Registro </h5>
+            <div class="form-row">
+              <div class="form-group col-md-10">
+                <!--ITEMS DEL FORMULARIO -->
+                <label for="inputnombre">Nombres</label>
+                <input type="text" class="form-control" id="inputnombre" placeholder="Nombres ">
+              </div>
+              <div class="form-group col-md-10">
+                <!--ITEMS DEL FORMULARIO -->
+                <label for="inputapellido">Apellidos</label>
+                <input type="text" class="form-control" id="inputapellido" placeholder="Apellidos ">
+              </div>
+              <div class="form-group col-md-10">
+                <label for="inputuser">Usuario</label>
+                <input type="text" class="form-control" id="inputuser" placeholder="User">
+              </div>
+              <div class="form-group col-md-10">
+                <label for="inputpass">Contraseña</label>
+                <input type="text" class="form-control" id="inputpass" placeholder="Password">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-10">
+                  <label for="inputidperfil">Tipo de Usuario</label>
+                  <!--ITEMS DEL FORMULARIO -->
+                  <select id="inputidperfil" class="form-control">
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+            </div> 
+            
+            <br>
+            <button id="Button1" type="button"  class="btn btn-dark" onclick="add_Usuarios()">Guardar</button>
+
+            <button id="Button" type="button" disabled class="btn btn-Success" onclick="update_Usuarios()">Modificar</button>      
+          </form>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 ">
+          <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+          <img src="../img/Img20.jpg" class="img-fluid">
+          <!--IMPORTACIÓN DE IMAGEN -->
+          <div class="col-lg-6 col-sm-6 ">
+            <div class="row">
+                <!--TAMAÑO O DIMENSIÓN DE LA GRILLA -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-lg-6">
+          <!--Consultar todos los registros. llama el metodo getUsuarios()-->
+        <button type="button" class="btn btn-info" onclick="getUsuarios()">Enlistar Registros</button>
+        <div id="buscar">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+          <!--INICIO DE UNA NUEVA SECCIÓN -->
+      <div class="text-center bg-success text-white">
+        <h5> Usuarios Alojados en la BDD </h5>
+        <!--TITULO ENCABEZADO #3-->
+      </div>
+      <!-- TABLA 1 -->
+      <table id="tableUser" class="table table-success table-striped">
+        <thead>
+          <tr>
+            <th>ID </th>
+            <th>Nombres </th>
+            <th>Apellidos </th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Tipo de Perfil</th>
+            <th>Editar</th>
+            <th>Eliminar</th>            
+          </tr>
+        </thead>
+        <tbody id="tableUserBody"></tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+  
+  <hr>
+  <div class="text-center bg-success text-white">
+    citas@gmail.com <br />
+    Calle 52 #38 – 25 Barranquilla – Atlantico, Colombia <br />
+    (57) (5) 12345678 <br />
+    Copyright © 2019
+    Desarrollado por Jeiner Rodelo Barrios
+   </div>
+  
+  <!--FIN DE PIE DE PAGINA -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/procesos.js"></script>
+</div>
+</body>
+</body>
+<!--FIN O CIERRE DEL CUERPO DE PAGINA -->
+
+</html>
+<!--FIN DE HTML -->
